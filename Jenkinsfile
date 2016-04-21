@@ -1,5 +1,6 @@
 node ('docker') {
   stage 'SCM Checkout'
+  checkout scm
   sh 'ls -l'
   
   stage 'Docker image build'
