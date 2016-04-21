@@ -1,0 +1,35 @@
+<CTYPE html>
+<html>
+<head>
+    <title>IEEE Docker Demo</title>
+    <script>
+    function getRef() {
+        try {
+           document.getElementById("referredBy").value="JCJC0099"
+        } catch (e) {
+          alert(e)
+        }
+    }
+    </script>
+</head>
+
+<body onload="getRef()">
+
+<form action="action_page.php">
+  <input type="hidden" name="referredBy" id="referredBy" value="Fixed Value">
+  First name:<br>
+  <input type="text" name="firstname">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Note that the form itself is not visible.</p>
+
+<p>Also note that the default width of a text input field is 20 characters.</p>
+
+</body>
+</html>
+
