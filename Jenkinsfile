@@ -12,5 +12,6 @@ node ('docker') {
 
 node ('docker') {
   stage 'Launch docker container'
-  echo "placeholder for launch docker container"
+  docker-compose up -d
+  docker-compose ps
 }
