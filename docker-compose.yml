@@ -1,7 +1,10 @@
-version: '2'
-services:
-   web:
-      image: axnapp
+mongo:
+   image: mongo
 
-   db:
-      image: mongo
+web:
+   image: axnapp
+   links:
+      - mongo:mongo
+   ports:
+      - 9999:80
+
