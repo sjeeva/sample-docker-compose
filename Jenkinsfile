@@ -12,6 +12,6 @@ node ('docker') {
 
 node ('docker') {
   stage 'Launch docker container'
-  docker-compose up -d
-  docker-compose ps
+  sh 'docker-compose up -d'
+  sh 'docker-compose ps'
 }
