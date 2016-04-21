@@ -1,13 +1,13 @@
 node ('docker') {
   stage 'SCM Checkout'
+  checkout scm
   sh 'ls -l'
   
   stage 'Docker image build'
-  echo "${TEST}" 
-  sh 'docker version'
+  sh 'docker build -t axnapp axnapp/'
   
   stage 'Docker image push'
-  sh 'docker info'
+  sh 'docker images'
 }
 
 node ('docker') {
